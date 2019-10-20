@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="day2.css">
+    <script>
+        function deleteBlank() {
+            target = document.getElementById("output");
+            text = document.forms.form1.input_text.value;
+            text2 = text.replace(/\s+/g, "");
+            target.innerText = text2;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>空白・改行取り除きシステム</h2>
+    <div class="wrapper">
+        <form action="" name="form1">
+            <textarea id="input_text" name="form1_text1" class="input_form"></textarea>
+            <br>
+            <br>
+        </form>
+        <div id="output" class="text_output">
+        </div>
+    </div>
+    <input type="button" value="変換" onclick="deleteBlank();"> <br>
+</body>
+
+</html>

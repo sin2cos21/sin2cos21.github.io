@@ -1,0 +1,54 @@
+
+
+/* header part */
+
+header {
+    text-align: right;
+    border-bottom: 1px solid rgba(0, 255, 255, .2);
+}
+
+header ul li {
+    display: inline;
+    margin-left: 10px;
+    color: rgba(0, 255, 255, .7);
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgba(0, 255, 255, .7);
+
+}
+
+ul {
+    list-style: none;
+  }
+
+
+.unimplemented {
+    cursor: pointer;
+}
+
+/* first section part */
+
+
+.first_section {
+    border-bottom: 1px solid rgba(0, 255, 255, .2);
+}
+
+.section_reference {
+    margin-bottom: 1em;
+}
+
+/* second article section part */
+
+.site_list_a {
+    text-decoration: none;
+}
+
+.site_list_a:link { 
+    color: rgba(0, 255, 255, .7);
+}
+
+.site_list_a:visited { 
+    color: rgba(128, 2, 128, .7);
+}
