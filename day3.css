@@ -1,0 +1,19 @@
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.kokuban {
+    border:thick ridge #800000;background-color:#006a00;color:#ffffff;
+}
+
+.output_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="day3.css">
+    <title>day3</title>
+    <script>
+
+        function text() {
+            var text = document.forms.form1.input_text.value;
+            var text11 = text.length;
+            var target = document.getElementById("output");
+            target.innerText = text11;
+        }
+
+        function text2() {
+            var text2 = document.forms.form1.input_text.value;
+            var text22 = text2.replace(/\s+/g, "");
+            var target2 = document.getElementById("output2");
+            target2.innerText = text22.length;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h2>文字数カウンター</h2>
+
+    <form action="" name="form1" class=wrapper>
+        <textarea name="input_text" id="form1_text1" cols="50" rows="30" class="kokuban"></textarea>
+    </form>
+    <div class="output_wrapper">
+        <div>
+            <input type="button" id="test4" value="空白あり" onclick="text();">
+
+            <div id="output">
+            </div>
+
+        </div>
+        <div>
+            <input type="button" id="test5" value="空白なし" onclick="text2();">
+            <div id="output2">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+
+</html>
