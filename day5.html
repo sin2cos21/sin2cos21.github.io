@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="day5.css">
+    <script>
+        function drag($event) {
+            $event.dataTransfer.setData("Text", $event.target.id);
+        };
+        var $count = 0;
+        function count() {
+            document.getElementById("count").innerHTML = ++$count;
+        }
+
+        function change() {
+            document.getElementById("wrapper2").style.backgroundColor = "rgba(0, 0, 0, .1)";
+        }
+
+        function change2() {
+            document.getElementById("wrapper2").style.backgroundColor = "transparent";
+        }
+
+        function drop($event) {
+            var test = event.dataTransfer.getData("text");
+            var test2 = document.getElementById(test);
+            $event.currentTarget.appendChild(test2);
+            $event.preventDefault();
+        }
+    </script>
+    <title>day5</title>
+</head>
+
+<body>
+    <h2>ドラッグ&ドロップ</h2>
+    <div class="wrapper">
+        <div class="wrapper1">
+            <div class="box_wrapper">
+                <div id="box1" draggable="true" ondragstart="drag(event)" ondrag="count();" ondrop="drop(event);"></div>
+            </div>
+            <div class="box_wrapper">
+                <div id="box2" draggable="true" ondragstart="drag(event)" ondrag="count();" ondrop="drop(event);"></div>
+            </div>
+            <div class="box_wrapper">
+                <div id="box3" draggable="true" ondragstart="drag( event )" ondrag="count();" ondrop="drop(event);"></div>
+            </div>
+        </div>
+
+        <div id="wrapper2" class="wrapper2" ondragenter="change(); event.preventDefault();" ondragover="event.preventDefault();"
+            ondrop="drop(event); event.preventDefault(); change2();">
+        </div>
+    </div>
+
+    <p>
+        ドラッグ時間：
+        <span id="count">0</span>
+    </p>
+</body>
+
+</html>
