@@ -38,13 +38,13 @@
     <div class="wrapper">
         <div class="wrapper1">
             <div class="box_wrapper">
-                <div id="box1" draggable="true" ondragstart="drag(event)" ondrag="count();" ondrop="drop(event);"></div>
+                <div id="box1" draggable="true" ondragstart="drag(event); count();" ondrop="drop(event);"></div>
             </div>
             <div class="box_wrapper">
-                <div id="box2" draggable="true" ondragstart="drag(event)" ondrag="count();" ondrop="drop(event);"></div>
+                <div id="box2" draggable="true" ondragstart="drag(event); count();" ondrop="drop(event);"></div>
             </div>
             <div class="box_wrapper">
-                <div id="box3" draggable="true" ondragstart="drag( event )" ondrag="count();" ondrop="drop(event);"></div>
+                <div id="box3" draggable="true" ondragstart="drag( event ); count();" ondrop="drop(event);"></div>
             </div>
         </div>
 
@@ -54,7 +54,7 @@
     </div>
 
     <p>
-        ドラッグ時間：
+        ドラッグ回数：
         <span id="count">0</span>
     </p>
 </body>
