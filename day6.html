@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day6</title>
+</head>
+
+<body>
+    <h2>ajax + Youtube API</h2>
+    <br>
+    <button id="test5">ボタン</button>
+    <div id="test6" style="height: 500px; width: 500px;"></div>
+
+    <script>
+        test7 = document.querySelector("#test5");
+        test8 = document.querySelector("#test6");
+        test7.onclick = function () {
+            var x = new XMLHttpRequest();
+            x.onreadystatechange = function () {
+                if (x.readyState == 4) {
+                    var test = x.responseText;
+                    test2 = JSON.parse(test);
+                    Object.keys(test2).forEach(key => test8.innerHTML = ('key:' + key + ' value:' + test2[key]));
+                }
+            }
+            x.open('GET', 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=jp&key=AIzaSyDcCnXDPR8H4fe9KeQwwuFOxlg4fgH_BFQ');
+            x.send();
+        }
+    </script>
+</body>
+
+</html>
