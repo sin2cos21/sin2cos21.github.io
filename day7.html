@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+        #test {}
+
+        ;
+    </style>
+    <title>day7</title>
+</head>
+
+<body>
+    <h1>Hello, World!</h1>
+    <button id="button">ボタン</button>
+    <div id="test">
+        <img src="firefox_1.png" alt="firefoxのロゴ画像">
+    </div>
+    <button id="button2">ここをクリック</button>
+    <p></p>
+
+    <script>
+
+
+        // h1とbutton要素を取得して格納しておく変数
+        var myHeading = document.querySelector('h1');
+        var myButton = document.getElementById('button');
+        var myDiv = document.getElementById('button2');
+
+        // borderの種類 0~7までの配列
+        var boder_style = ["solid", "double", "groove", "ridge", "inset", "outset", "dashed", "dotted"];
+
+        function border_change() {
+            var img = document.getElementById('test');
+            var random1 = Math.floor(Math.random() * boder_style.length);
+            var border_random = boder_style[random1];
+            var pVal = document.querySelector('p');
+            var pixel = Math.floor(Math.random() * 10);
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var border_val = pixel + "px " + border_random;
+            var bgColor = "rgba(" + r + "," + g + "," + b + ",0.7)"
+            pVal.innerHTML = "border: " + border_val + "/" + bgColor;
+            img.style.border = border_val;
+            img.style.backgroundColor = bgColor;
+        };
+
+        myDiv.onclick = function () {
+            border_change();
+        }
+
+        // クリックで画像変更するコード
+        var myImage = document.querySelector('img');
+        myImage.onclick = function () {
+            var mySrc = myImage.getAttribute('src');
+            if (mySrc === 'firefox_1.png') {
+                myImage.setAttribute('src', 'firefox_2.png');
+            } else {
+                myImage.setAttribute('src', 'firefox_1.png');
+            }
+        };
+
+        // 名前を入力するコード
+        function setName() {
+            var userName = prompt('あなたの名前を入力してください');
+            localStorage.setItem('name', userName);
+            myHeading.textContent = 'こんにちは' + userName + 'さん';
+        };
+
+        // 名前を入力するコード　初期化コード
+        if (!localStorage.getItem('name')) {
+            setName();
+        } else {
+            var storedName = localStorage.getItem('name');
+            myHeading.textContent = 'こんばんは' + storedName + 'さん';
+        }
+
+        myButton.onclick = function () {
+            setName();
+        };
+
+    </script>
+</body>
+
+</html>
