@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day8</title>
+</head>
+
+<body>
+    <h2>数字当てゲーム</h2>
+    <p>1 から 100 までの数字を当ててみて！10 回以内に当てられるでしょうか。<br>
+        選んだ数字が大きいか小さいかを表示します。</p>
+    <br>
+    <br>
+    <div>
+        <div> 数字を入力してください:
+            <form id="form1" action="">
+                <input type="text" id="textBox1">
+                <input type="button" id="button" value="予想を入力" onclick="onButtonClick(); imgChange();">
+                <input type="button" id="reset" value="やり直す" onclick="allReset();">
+            </form>
+        </div>
+        <br>
+        <div>前回の予想: <span id="yosou"></span>
+            <div id="houkoku"></div>
+            <div id="daisyo"></div>
+        </div>
+    </div>
+    <div>
+        <img src="go.png" alt="判定画像" id="flagImg">
+    </div>
+    <script>
+        var cNumber = Math.floor(Math.random() * 101);
+        var eNumbers = [10];
+        var count = 0;
+        var yosou = document.getElementById('yosou');
+        var button = document.getElementById('button');
+        var houkoku = document.getElementById('houkoku');
+        var daisyo = document.getElementById('daisyo');
+        var textBox1 = document.getElementById('textBox1');
+        var flag2;
+        var flagImg = document.getElementById('flagImg');
+
+        function imgChange() {
+            var mySrc = flagImg.getAttribute('src');
+            if (flag2 === true) {
+                flagImg.setAttribute('src', 'maru.png');
+            } else {
+                flagImg.setAttribute('src', 'batu.png');
+            };
+        };
+
+        function onButtonClick() {
+            if (count < 10) {
+                count += 1;
+                var iNumber = document.forms.form1.textBox1.value;
+                eNumbers[count - 1] = iNumber;
+                var miNumber = Number(iNumber);
+                yosou.textContent += miNumber + " ";
+                textBox1.value = "";
+                if (count == 10) {
+                    button.disabled = true;
+                };
+                if (miNumber === cNumber) {
+                    houkoku.textContent = "おめでとう！正解です！";
+                    flag2 = true;
+                    daisyo.textContent = "";
+                    button.disabled = true;
+                } else {
+                    houkoku.textContent = "間違いです！";
+                    flag2 = false;
+                    if (cNumber > miNumber) {
+                        daisyo.textContent = "今の予想は小さすぎです!もっと大きな数字です。";
+                    } else {
+                        daisyo.textContent = "今の予想は大きすぎです!もっと小さな数字です。";
+                    };
+                };
+            };
+        };
+
+        function allReset() {
+            eNumbers.length = 0;
+            count = 0;
+            button.disabled = false;
+            yosou.textContent = "";
+            houkoku.textContent = "";
+            daisyo.textContent = "";
+        };
+    </script>
+</body>
+
+</html>
