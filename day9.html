@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .wrapper {
+            display: flex;
+        }
+        #inputText {
+            width: 350px;
+            height: 350px;
+            border: 1px solid rgba(128, 0, 128, .5);
+            margin-right: 10px;
+            }
+
+        .textOutput {
+            width: 350px;
+            height: 350px;
+            border: 1px solid rgba(0, 128, 128, .5);
+        }
+
+        .submitStyle {
+            margin-top: 20px;
+        }
+
+</style>
+    <title>day9</title>
+</head>
+
+<body>
+    <h2>10文字区切りで数えてくれるシステム</h2>
+    <div class="wrapper">
+        <form action="" name="form1">
+            <textarea id="inputText" name="inputText"></textarea>
+        </form>
+        <div id="output" class="textOutput">
+        </div>
+    </div>
+    <input type="button" value="変換" id="submitStyle">
+    <br>
+
+    <script>
+
+        let sButton = document.getElementById('submitStyle');
+        sButton.addEventListener('click', dataArrange);
+
+
+        function dataArrange() {
+            iText = document.forms.form1.inputText.value;
+            let deleteBlank = iText.replace(/\s+/g, "");
+            console.log(deleteBlank);
+            let textLength = deleteBlank.length;
+            let word1 = 0;
+            let word2 = 10;
+            let textLength2;
+            let output = document.getElementById('output');
+
+            for (var i = 0; textLength >= i; i += 10) {
+                let word3 = deleteBlank.slice(word1, word2);
+                output.textContent += '<今' + word1 + '文字>' + word3;
+                word1 += 10;
+                word2 += 10;
+            };
+            output.textContent += '<計: ' + textLength + '文字>';
+        }
+    </script>
+
+</body>
+
+</html>
