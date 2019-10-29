@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Silly story generator</title>
+    <style>
+        body {
+      font-family: helvetica, sans-serif;
+      width: 350px;
+    }
+    label {
+      font-weight: bold;  
+    }
+    div {
+      padding-bottom: 20px;
+    }
+    input[type="text"] {
+      padding: 5px;
+      width: 150px;
+    }
+    p {
+      background: #FFC125;
+      color: #5E2612;
+      padding: 10px;
+      visibility: hidden;
+    }
+    </style>
+    <!-- <script src="day11.js"></script> -->
+</head>
+
+<body>
+    <h2>バカ話ジェネレーター</h2>
+    <div>
+        <label for="customname">Enter custom name:</label>
+        <input id="customname" type="text" placeholder="">
+    </div>
+    <div>
+        <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" disable="false">
+        <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk" disabled="false">
+    </div>
+    <div>
+        <button class="randomize">Generate random story</button>
+    </div>
+
+    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+    <p class="story"></p>
+    <div id="test">ランダム: </div>
+
+    <script>
+        var customName = document.getElementById('customname');
+        customName.focus();
+        var randomize = document.querySelector('.randomize');
+        var test = document.querySelector('.randomize');
+        var hoge = document.getElementById('hoge');
+        var story = document.querySelector('.story');
+        function randomValueFromArray(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+        storyText = 'It was  94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. :Bob: saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+        insertX = [
+            'Willy the Goblin',
+            'Big Daddy',
+            'Father Christmas'
+        ];
+        insertY = [
+            'the soup kitchen',
+            'Disneyland',
+            'the White House'
+        ];
+        insertZ = [
+            'spontaneously combusted',
+            'melted into a puddle on the sidewalk',
+            'turned into a slug and crawled away'
+        ];
+        let newStory;
+        console.log(newStory);
+
+        randomize.addEventListener('click', result);
+
+        function result() {
+            newStory = storyText;
+            console.log("入った");
+            let xItem = randomValueFromArray(insertX);
+            let yItem = randomValueFromArray(insertY);
+            let zItem = randomValueFromArray(insertZ);
+            let test = document.getElementById('test');
+            test.innerHTML = "<br>" + xItem + "<br>" + yItem + "<br>" + zItem;
+            newStory = newStory.replace(/:insertx:/g, xItem);
+            console.log(newStory);
+            newStory = newStory.replace(/:inserty:/g, yItem);
+            newStory = newStory.replace(/:insertz:/g, zItem);
+
+            if (customName.value !== '') {
+                var name = customName.value;
+                newStory = newStory.replace(':Bob:', name);
+            }
+
+            story.textContent = newStory;
+            story.style.visibility = 'visible';
+        }
+
+    </script>
+
+</body>
+
+</html>
