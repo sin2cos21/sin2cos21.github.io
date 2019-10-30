@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day12</title>
+    <style>
+        .blockType {
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+    <h2>オブジェクト指向 JavaScript</h2>
+    <p>全て入力してください</p>
+    <form name="form1">
+        姓: <input type="text" id="lastName" class="blockType" required>
+        名: <input type="text" id="firstName" class="blockType" required>
+        趣味1: <input type="text" id="interest1" class="blockType" required>
+        趣味2: <input type="text" id="interest2" class="blockType" required><br>
+    </form>
+    <input type="submit" id="createHuman" value="創造してみる">
+    <p id="human"></p>
+
+
+    <script>
+        let createClick = document.getElementById('createHuman');
+        createClick.addEventListener('click', createHuman);
+
+
+
+        function Person(first, last, interest1, interest2) {
+            this.name = {
+                first: first,
+                last: last
+            };
+            this.interest = {
+                interest1: interest1,
+                interest2: interest2
+            };
+        }
+
+
+        function createHuman() {
+            let lastName = document.forms.form1.lastName.value;
+            let firstName = document.forms.form1.firstName.value;
+            let interest1 = document.forms.form1.interest1.value;
+            let interest2 = document.forms.form1.interest2.value;
+
+            let test22 = new Person(firstName, lastName, interest1, interest2);
+            let talk = '私の名前は' + test22.name.last + ' ' + test22.name.first + 'です。趣味は' + test22.interest.interest1 + 'と' + test22.interest.interest2 + 'です。';
+            let human = document.getElementById('human');
+            human.textContent = talk;
+            let myNotification = new Notification('私の名前は' + test22.name.last + ' ' + test22.name.first + 'です。');
+            myNotification;
+        }
+
+    </script>
+</body>
+
+</html>
