@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day13</title>
+</head>
+
+<body>
+    <h2>try...catch...finally</h2>
+    <input type="text" id="checkData" placeholder="3文字のみ入力可">
+    <input type="button" id="checkButton" value="送信"><br>
+    <input type="text" id="checkData2" placeholder="半角数字のみ入力可">
+    <input type="button" id="checkButton2" value="送信"><br>
+    <p id="output"></p>
+    <script>
+        document.getElementById('checkButton').addEventListener('click', checkData);
+
+        function checkData() {
+            let checkNumber = document.getElementById('checkData');
+            if (checkNumber.value.length !== 3) {
+                alert('入力は3文字まで!');
+                clearnData(checkNumber);
+                checkNumber.focus();
+            } else {
+                alert(checkData.value + 'は3文字だね。いい感じ！');
+                clearnData(checkNumber);
+            }
+        }
+
+        function clearnData(checkNumber) {
+            checkNumber.value = '';
+        }
+
+        document.getElementById('checkButton2').addEventListener('click', function () {
+            try {
+                alert('tryです');
+                let checkNumber2 = document.getElementById('checkData2');
+                let random = Math.floor(checkNumber2) * 100;
+                throw random2;
+            } catch (e) {
+                document.getElementById('output').textContent = ('例外: ' + e);
+            } finally {
+                document.getElementById('output').innerHTML += '<br>finallyです。使ってくれてありがとう！';
+            }
+        });
+
+    </script>
+</body>
+
+</html>
