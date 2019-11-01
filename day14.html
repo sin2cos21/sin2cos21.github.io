@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day14</title>
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        #wrapper {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        #mouseMove {
+            background-color: rgba(100, 100, 100, 1);
+            height: 70%;
+            width: 70%;
+            z-index: 100;
+        }
+
+        #test {
+            position: absolute;
+            border-radius: 50%;
+            background-color: white;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<!-- メモ
+属性付与 → 要素.setAttribute(属性名,属性値);
+ノードの追加 → var p = document.createElement("p");
+document.body.appendChild(p);
+ -->
+
+<body>
+    <div id="wrapper">
+        <div id="mouseMove"></div>
+
+    </div>
+    <script>
+        window.onload = function () {
+
+            let plusTime = 5;
+            function timeCount() {
+                alert('遊び始めてから' + plusTime + '秒経ちました');
+                plusTime += 5;
+            }
+            setInterval(timeCount, 5000);
+
+            function myNotification() {
+                let myNotification = new Notification('速達です');
+                myNotification;
+            }
+            setTimeout(myNotification, 3000);
+
+            let circle = document.getElementById('mouseMove');
+            let div = document.createElement('div');
+            div.setAttribute('id', 'test');
+            let text = '肉';
+            let textNode = document.createTextNode(text);
+            div.appendChild(textNode);
+            let plusDiv = circle.appendChild(div);
+            console.log(plusDiv);
+
+            let mouseX = 0;
+            let mouseY = 0;
+            let eNode = document.createElement('span');
+            eNode.setAttribute('id', 'test2');
+            let mouseMove = document.getElementById("mouseMove");
+            mouseMove.appendChild(eNode);
+            mouseMove.addEventListener('mousemove', function (e) {
+                let coordinate = ' (X座標：' + e.pageX + ' Y座標：' + e.pageY + ')';
+                eNode.innerHTML = coordinate;
+            })
+        }
+    </script>
+</body>
+
+</html>
