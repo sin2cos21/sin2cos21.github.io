@@ -1,0 +1,55 @@
+.icon_bector::after{
+    padding-left: .3em;
+    content: ">";
+    font-size: .4em;
+}
+
+.icon_bector {
+    color: #6bf;
+    text-decoration: none;
+    line-height: 2.5em;
+    font-size: 21px;
+}
+
+.icon_bector:hover {
+text-decoration: underline;
+}
+
+.content_page {
+    color: #00F	;
+    height: 550px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("iphone.jpg");
+    padding-top: 65px;
+}
+
+#content_page_title {
+    display: block;
+font-weight: 600;
+font-size:44px;
+line-height: 1.5em;
+}
+
+#content_page_description {
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5em;
+}
+@media screen and (max-width: 735px) and (min-width: 0px){
+    .content_page {
+        height: 350px;
+    }
+    #content_page_title {
+        font-size: 30px;
+    }
+    .icon_bector {
+        font-size: 11px;
+    }
+    #content_page_description {
+        font-size: 14px;
+    }
+}
