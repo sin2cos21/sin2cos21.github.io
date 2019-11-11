@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 2000px;
+}
+/* ______________ここからheader________________________ */
+
+header {
+    background-color: rgba(0, 0, 0, .8);
+}
+header > h2 {
+    color: #FFFF;
+    text-align: center; 
+}
+header > h2 > i {
+padding-left: .5em;
+font-size: 1.1em;
+}
+
+#nav_topic_wrapper {
+    display: flex;
+    margin: 0;
+}
+
+#nav_topic_wrapper > div {
+line-height: 40px;
+color: #FFFF;
+font-size: .8em;
+flex-grow: 1;
+text-align: center;
+}
+
+/* ______________ここからmain________________________ */
+
+#message {
+    padding: 300px 0;
+}
+#message > h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    font-weight: 1000;
+}
+
+.photo {
+    color: rgba(0, 0, 0, .8);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+#photo1 {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.wf-sawarabimincho { 
+    font-family: "Sawarabi Mincho"; }
+
+.photo_message {
+    width: 70%;
+    font-size: 1.5em;
+}
+
+.photo_image {
+    width: 100%;
+    text-align: center;
+}
+
+.photo_image > img {
+    width: 50vw;
+}
+
+#photo2 {
+    background-color: rgba(100, 100, 100, .2);
+}
+
+.photo2_image {
+    width: 100%;
+    text-align: center;
+}
+
+.photo2_image > img {
+    width: 30vw;
+}
+
+.photo2_message {
+    width: 70%;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#photo3 {
+    background-color: rgba(10, 10, 10, .8);
+}
+.photo3_message {
+    color: rgba(255, 255, 255, .7);
+     width: 70%;
+    font-size: 1.2em;
+    
+}
+
+#photo4 {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.photo4_message {
+    color: rgba(255, 255, 255, .5);
+}
+
+#photo5 {
+    background-color: rgba(0, 0, 0, 1);
+    padding-bottom: 200px;
+}
+
+.photo5_message {
+    width: 70%;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, .5);
+}
+
+/* ______________ここからfooter________________________ */
+
+
+footer {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: .7em;
+    color: #FFFF;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    margin-top: auto;
+}
