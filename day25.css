@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+#image_wrapper {
+    background-color: rgba(0, 0, 0, 1);
+    width: 100vw;
+    height: 100vh;
+    /* 画像を真ん中に配置するためのflex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background_image {
+    /* 以下2つのプロパティで、img画像をボックス内に縦横比を保ってなるべく大きく表示する（原寸以上にはならない） */
+    max-width:100%;
+    max-height:100%;
+    z-index: 0;
+}
+
+.text_on_image {
+    display: inline;
+    margin: 0;
+    color: white;
+    font-size: 4.5em;
+
+    /* 要素同士を被せるためにはabsoluteかfixedを使わないといけない */
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    /* または
+    bottom: 50%;
+    right: 50%;
+    transform: translateY(50%) translateX(50%); */
+}
