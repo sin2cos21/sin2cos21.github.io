@@ -1,0 +1,158 @@
+
+body {
+    margin: 0;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+@keyframes test {
+    0% {
+        background-color: black;
+        width: 10px;
+        height: 10px;
+    }
+    50% {
+        background-color: rgba(255, 255, 255, .8);
+        width: 50vw;
+        height: 20vh;
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 1);
+        width: 50vw;
+        height: 50vh;
+    }
+}
+
+@keyframes test2 {
+    0% {
+        background-color: black;
+        width: 10px;
+        height: 50vh;
+    }
+    80% {
+        background-color: rgba(255, 255, 255, .8);
+        width: 45vw;
+        height: 50vh;
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 1);
+        width: 50vw;
+        height: 50vh;
+    }
+}
+
+@keyframes hello_world {
+    0% {
+        background-color: black;
+        width: opx;
+        height: 0px;
+        border-radius: 0%;
+    }
+    50% {
+        background-color: black;
+        width: 100vw;
+        height: 1px;
+        border-radius: 0%;
+    }
+    100% {
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 50%;
+    }
+}
+
+@keyframes last {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.test {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation-name: test;
+    animation-duration: 5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.test2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: test;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.test3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation-name: test2;
+    animation-duration: 5s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
+.test4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation-name: test2;
+    animation-duration: 5s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
+.test5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    animation-name: hello_world;
+    animation-duration: 3s;
+    animation-delay: 12s;
+    animation-fill-mode: forwards;
+}
+
+.test6 {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation-name: last;
+    animation-duration: 2s;
+    animation-delay: 15s;
+    animation-fill-mode: forwards;
+
+}
+
+.background_image {
+    max-width:100%;
+    max-height:100%;
+    z-index: 0;
+}
+.text_on_image {
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    color: white;
+    font-size: 4.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
