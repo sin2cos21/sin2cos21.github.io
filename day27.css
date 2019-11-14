@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+}
+
+
+.diplay-tag {
+    background-color: rgba(200, 0, 0, .5);
+    width: 50%;
+    margin: 50px auto 0 auto;
+}
+.diplay-tag:hover h1::before {
+    content:"<h1>";
+}
+.diplay-tag:hover h1::after {
+    content:"</h1>";
+}
+.diplay-tag:hover h2::before {
+    content:"<h2>";
+}
+.diplay-tag:hover h2::after {
+    content:"</h2>";
+}
+
+.display-image {
+    background-color: rgba(0, 200, 0, .5);
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+.display-image:hover {
+    background-color: rgba(0, 0, 0, 1);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.end {
+    color: white;
+
+}
+.display-image:hover::after {
+    content: "終了";
+    color: white;
+    position: fixed;
+    font-size: 5em;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+.dl-field {
+    background-color: rgba(0, 0, 200, .5);
+    width: 50%;
+    margin: 50px auto 50px auto;
+}
+span {
+    display: inline-block;
+}
+.dl-field:hover span::first-line {
+    font-size: 3.5em;
+}
+dt {
+    display: inline-block;
+}
+dd {
+    display: inline-block;
+}
+.dl-field:hover dd::before {
+    content: "・・・";
+}
