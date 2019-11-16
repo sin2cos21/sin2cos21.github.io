@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+.button {
+    width: 3rem;
+    height: auto;
+    color: white;
+    background-color: black;
+}
+
+.button:hover + div > .test {
+    width:  7rem;
+    color: white;
+}
+
+
+.test {
+    width:  0px;
+    height: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    transition-property: width color;
+}
