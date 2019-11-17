@@ -1,0 +1,86 @@
+body {
+margin: 0;
+overflow-x: hidden;
+}
+
+.hamburgerButtonLabel {
+cursor: pointer;
+position: absolute;
+top: 0;
+right: 0;
+}
+
+#hamburgerButtonTest input {
+display: none;
+}
+
+.hamburgerButtonLabel div {
+margin-top: 50px;
+margin-right: 100px;
+height: auto;
+width: 2rem;
+text-align: center;
+font-size: 1rem;
+display: inline-block;
+background-color: black;
+color: white;
+}
+
+#hamburgerMenu {
+position: absolute;
+top: 125px;
+right: 0;
+width: 30vw;
+transition: all .5s ease;
+transform: translateX(100%);
+}
+
+#hamburgerMenu > div {
+text-align: center;
+background-color: rgba(0, 200, 200, .5);
+color: white;
+line-height: 5rem;
+border-top: .5px solid white;
+}
+
+#hamburgerMenu > div > a {
+text-decoration: none;
+color: white;
+}
+
+#hamburgerButton:checked+div{
+    transform: translateX(0px);
+}
+
+#overflowTest {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2000px;
+}
+
+.overflowContent {
+    width: 400px;
+    height: 250px;
+    font-family: "noto sans CJK";
+    border:10px double rgba(0, 0, 0, .5);
+    transition: all .5s ease;
+}
+
+.overflowContent:hover {
+    transform: scaleX(1.2);
+}
+
+#oVisible {
+    background-color: rgba(255, 0, 0, .5);
+    overflow: visible;
+}
+
+#oHidden {
+    background-color: rgba(0, 0, 255, .5);
+    overflow: hidden;
+}
+
+#scroll {
+    background-color: rgba(255, 255, 0, .5);
+    overflow: scroll;
+}

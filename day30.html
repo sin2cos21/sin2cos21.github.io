@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="day30.css">
+    <script src="day30.js" defer></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <title>day30</title>
+</head>
+
+<body>
+    <div id="hamburgerButtonTest">
+        <label class="hamburgerButtonLabel" for="hamburgerButton">
+            <div>
+                <i class="fas fa-bars"></i>
+            </div>
+        </label>
+        <input type="checkbox" id="hamburgerButton">
+        <div id="hamburgerMenu">
+            <div>目次</div>
+            <div><a href="">横スクロール討伐完了！</a></div>
+            <div><a href="#overflowTest">overflowについて</a></div>
+        </div>
+    </div>
+
+    <div id="overflowTest">
+        <div>
+            overflow: visible;<br>
+            説明: ボックス外にはみ出たコンテンツを表示する(初期値)
+            <div class="overflowContent" id="oVisible"></div>
+        </div>
+        <div>
+            overflow: hidden;<br>
+            説明: ボックス外にはみ出たコンテンツを非表示にする
+            <div class="overflowContent" id="oHidden"></div>
+        </div>
+        <div>
+            overflow: scroll;<br>
+            説明: ボックス外にはみ出たコンテンツをスクロールできる
+            <div class="overflowContent" id="scroll"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
