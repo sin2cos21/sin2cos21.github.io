@@ -1,0 +1,60 @@
+.wrapper {
+    position: relative;
+    margin: 100px auto;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.image img {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    animation: imgTrans 10s infinite;
+}
+
+#photo1 img {
+    animation-delay: 0s;
+}
+
+#photo2 img {
+    animation-delay: 2s;
+}
+
+#photo3 img {
+    animation-delay: 4s;
+}
+
+#photo4 img {
+    animation-delay: 6s;
+}
+
+#photo5 img {
+    animation-delay: 8s;
+}
+
+@keyframes imgTrans {
+    0% {
+        left: 0%;
+        opacity: 0;
+    }
+    5% {
+        left: 0%;
+        opacity: 1;
+    }
+    20% {
+        left: 0%;
+        opacity: 1;
+    }
+    21% {
+        left: 0%;
+        opacity: 0;
+    }
+    100% {
+        left: 0%;
+        opacity: 0;
+    }
+}
+.boxDisplay {
+    padding: 30%;
+}
