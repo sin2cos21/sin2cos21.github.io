@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day32</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        h2 {
+            color: white;
+            }
+        .start-click {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 3em;
+            font-family:'Times New Roman', Times, serif;
+            background-color: rgba(0, 0, 0, .5);
+            color: white;
+            cursor: pointer;
+            padding: .5em;
+            border-radius: 50%;
+        }
+        .contents-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contents-body-wrapper {
+            display: none;
+        }
+        #click:checked + .start-click + .contents-body-wrapper {
+            display: block;
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+        }
+        #click:checked + .start-click {
+            display: none;
+        }
+        #click {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="click">
+    <label class="start-click" for="click">
+        クリック here...
+    </label>
+    <div class="contents-body-wrapper">
+        <div class="contents-body">
+            <h2>codepen を利用してみた</h2>
+            <div class="my-codepen-wrapper">
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="sin2cos21"
+                    data-slug-hash="OJJdpKX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                    data-pen-title="OJJdpKX">
+                    <span>See the Pen <a href="https://codepen.io/sin2cos21/pen/OJJdpKX">
+                            OJJdpKX</a> by sin2cos21 (<a href="https://codepen.io/sin2cos21">@sin2cos21</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="sin2cos21"
+                    data-slug-hash="oNNmWXK" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                    data-pen-title="oNNmWXK">
+                    <span>See the Pen <a href="https://codepen.io/sin2cos21/pen/oNNmWXK">
+                            oNNmWXK</a> by sin2cos21 (<a href="https://codepen.io/sin2cos21">@sin2cos21</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+
+</html>
