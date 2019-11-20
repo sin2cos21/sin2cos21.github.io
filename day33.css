@@ -1,0 +1,106 @@
+.bar-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 30px;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+.bar {
+    display: inline-block;
+    width: 500px;
+    height: 30px;
+    background-color: black;
+}
+
+
+.triangle {
+    border-top: 80px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 80px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10%);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+#right-human {
+    position: relative;
+    top: -30px;
+    right: -100px;
+}
+
+#left-human {
+    position: relative;
+    top: -30px;
+    right: 100px;
+}
+
+#left-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+#right-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+
+#left-button:hover + #right-button + .bar-wrapper {
+    animation-name: left;
+    animation-duration: 3s;
+}
+
+@keyframes left {
+    0%{
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    80%{
+        transform: translateX(-50%) translateY(-50%) rotate(-15deg);
+    }
+    100%{
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+}
+
+#right-button:hover + .bar-wrapper {
+    animation-name: right;
+    animation-duration: 3s;
+}
+@keyframes right {
+    0%{
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    80%{
+        transform: translateX(-50%) translateY(-50%) rotate(15deg);
+    }
+    100%{
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+}
