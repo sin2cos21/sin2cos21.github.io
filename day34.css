@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+}
+
+.all-container {
+    max-width: 1200px;
+}
+
+
+
+.header-menu {
+    margin-right: 5%;
+    line-height: 50px;
+   
+}
+
+.header-menu:first-of-type {
+    margin-right: auto;
+    margin-left: 5%;
+
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+
+.header-logo {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-image: url("day34-logo2.png");
+    background-size: cover;
+}
+
+/* @media screen and (max-width:750px) {
+    .header-more-than-751px {
+        display: none;
+    }
+
+    .header-less-than-750px {
+        display: flex;
+        justify-content: flex-end;
+        width: 100vw;
+        height: 50px;
+    
+        background-color: rgba(0, 0, 0, 1);
+} */
+
+@media screen and (min-width:751px) {
+    .header-less-than-750px {
+        display: none;
+    }
+
+    .header-more-than-751px {
+        display: flex;
+        justify-content: flex-end;
+        width: 100vw;
+        height: 50px;
+    
+        background-color: rgba(0, 0, 0, 1);
+    }
+}
+}
