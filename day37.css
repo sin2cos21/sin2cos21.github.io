@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: Didot,Didot LT STD,Bodoni,Palatino,Palatino Linotype,Sabon,Garamond,Adobe Garamond Pro,Hiragino Mincho Pro,HGSMinchoE,MS PMincho,serif;
+    color: white;
+}
+.one-page {
+    width: 100vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    display: inline-block;
+    font-size: 4em;
+    margin: 0;
+}
+
+.page-zero {
+    z-index: 1;
+    background-color: rgba(150, 100, 50, 1);
+}
+
+.page-one {
+    z-index: 1;
+    background-color: rgba(50, 0, 0, 1);
+}
+
+.page-two {
+    z-index: 2;
+    background-color: rgba(0, 50, 0, 1);
+}
+
+.page-three {
+    z-index: 3;
+    background-color: rgba(50, 50, 0, 1);
+}
+
+.page-four {
+    z-index: 4;
+    background-color: rgba(0, 0, 50, 1);
+}
+
+.page-five {
+    z-index: 5;
+    background-color: rgba(0, 50, 50, 1);
+}
+
+.page-six {
+    z-index: 6;
+    background-color: rgba(100, 10, 150, 1);
+}
