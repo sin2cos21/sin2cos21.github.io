@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 50px;
+}
+
+.wrapper2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 50px;
+}
+
+.image {
+    border-radius: 50%;
+    height: 150px;
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.image2 {
+    border-radius: 50%;
+    height: 150px;
+    width: auto;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.fukidashi {
+    width: 200px;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color:#FFF;
+    padding: 30px;
+    background-color:black;
+    border-radius: 50%;
+    z-index: 0;
+}
+.fukidashi::before {
+    top: 50%;
+    left: -5px;
+    margin-top: -10px;
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent black;
+    border-width: 10px 10px 10px 0px;
+}
+
+.fukidashi2 {
+    width: 200px;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color:#FFF;
+    padding: 30px;
+    background-color:black;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.fukidashi2::after {
+    top: 50%;
+    right: -5px;
+    margin-top: -10px;
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent black;
+    border-width: 10px 0px 10px 10px;
+}
