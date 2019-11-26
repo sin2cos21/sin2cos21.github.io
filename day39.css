@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 3000px;
+  }
+  .box {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 100px;
+ }
+  #box1 {
+    left: 10px;
+    background: red;
+  }
+  #box2 {
+    left: 60px;
+    background: blue;
+  }
+  #box3 {
+    left: 110px;
+    background: green;
+  }
+  /* #data1 {
+      position: fixed;
+      top:20px;
+      left: 20px;
+  } */
+
+  #display {
+      position: fixed;
+  }
