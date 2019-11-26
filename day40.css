@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#test {
+    width: 150vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-image: url('day40_imgae3.jpg');
+    z-index: -100;
+}
+
+.contents-wrapper {
+    width: 100vw;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, .8);
+}
+
+#main-contents {
+    width: 60vw;
+    line-height: 5em;
+    letter-spacing: 0.1em;
+}
+
+/* _______________________________ここからheader__________________ */
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header-menu {
+    margin-right: 5%;
+    line-height: 50px;
+}
+
+.header-menu:first-of-type {
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.header-logo {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-image: url('firefox_1.png');
+    background-size: cover;
+}
+
+.header-items {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#hamburgerButton {
+    display: none;
+}    
+
+@media screen and (max-width:750px) {
+    .header-more-than-751px {
+        display: none;
+    }
+    .icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+    }
+    .hamburger-icon {
+    color: white;
+    }
+    .header-menu-hover {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100vw;
+        transition: all .5s ease;
+        transform: translateX(100%);
+    }
+    .header-menu-hover > div {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 1);
+        color: white;
+        line-height: 24vh;
+        border-top: .5px solid white;
+    }
+    .header-menu-hover > div > a {
+        text-decoration: none;
+        color: white;
+    }
+    #hamburgerButton:checked+div{
+        transform: translateX(0px);
+    }
+}
+
+
+
+@media screen and (min-width:751px) {
+    .header-less-than-750px {
+        display: none;
+    }
+    .header-menu-hover {
+        display: none;
+    }
+}
+
+
+
+
+/* ____________ここからfooter_____________ */
+
+footer {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: .7em;
+    color: #FFFF;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    margin-top: auto;
+}
