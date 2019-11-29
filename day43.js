@@ -24,6 +24,7 @@ function draw() {
 
     if (4 <= test) {
         test = 0;
+        test2 = 0;
         x += 10;
     }
 
