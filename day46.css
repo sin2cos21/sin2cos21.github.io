@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#field1 {
+    background-color: rgb(200, 10, 20,.5);
+    width: 500px;
+    height: 300px;
+    margin: 50px;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#field2 {
+    background-color: rgb(20, 10, 200,.5);
+    width: 500px;
+    height: 300px;
+        margin: 50px;
+            display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#field3 {
+    background-color: rgb(200, 200, 10,.5);
+    width: 500px;
+    height: 300px;
+        margin: 50px;
+            display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
