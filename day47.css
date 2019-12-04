@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+
+#player {
+  width: 320px;
+  height: 240px;
+  border: 5px solid;
+  border-radius: 10px;
+}
+
+.snapshot {
+  width: 200px;
+  height: 150px;
+  border: 5px solid;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.videoWrapper {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(10, 110, 150, 0.3);
+}
+
+#snapshotWrapper {
+  background-color: rgba(10, 110, 200, 0.5);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  overflow-x: scroll;
+}
+
+#capture {
+  margin-left: 100px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0.5px solid blue;
+}
+
+#capture:hover {
+  cursor: copy;
+}
+
+h2 {
+  margin-left: 50px;
+}
