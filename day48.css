@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#mouseMove {
+  height: 100vh;
+  width: 100vw;
+}
+
+.position {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.dot {
+  position: absolute;
+  /* border-radius: 50%; */
+  background-color: black;
+  width: 3px;
+  height: 3px;
+}
+
+#men {
+  top: -100%;
+  left: -100%;
+}
+
+#doctor {
+  top: -100%;
+  left: -100%;
+}
