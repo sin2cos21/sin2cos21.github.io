@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#mouseMove {
+  height: 100vh;
+  width: 100vw;
+}
+
+.color {
+  background-color: red;
+  position: absolute;
+  width: 10%;
+  height: 10%;
+}
