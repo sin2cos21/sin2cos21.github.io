@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+#mouseMoveWrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#mouseMove {
+  height: 90vh;
+  width: 90vw;
+  border: solid 1px black;
+}
+
+.position {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.dot {
+  position: absolute;
+  background-color: black;
+  width: 1px;
+  height: 1px;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+#men {
+  top: -100%;
+  left: -100%;
+}
+
+#doctor {
+  top: -100%;
+  left: -100%;
+}
