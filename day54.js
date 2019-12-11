@@ -30,7 +30,10 @@ function judge(tekida, me) {
   if (teki === me) {
     jankenWord.innerHTML = "ヒキワケ";
     jankenWord.style.backgroundColor = "rgba(255,250,50, .5)";
-  } else if (me === "rock" && teki === "scissors") {
+  } else if (
+    (me === "rock" && teki === "scissors") ||
+    (teki === "rock" && me === "scissors")
+  ) {
     jankenWord.innerHTML = "カチ";
     jankenWord.style.backgroundColor = "rgba(255,50,50, .5)";
   } else if (me.length > teki.length) {
