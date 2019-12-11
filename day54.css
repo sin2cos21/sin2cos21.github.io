@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+}
+div {
+  width: 100px;
+  height: 100px;
+  border: solid 1px black;
+  margin: 50px 0 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#jankenImage {
+  background-size: cover;
+}
+
+#MyjankenImage {
+  background-size: cover;
+}
+
+#jankenImage::before {
+  content: "敵";
+  margin-top: 130px;
+}
+#MyjankenImage::before {
+  content: "Me";
+  margin-top: 130px;
+}
+
+.jankenButton {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.click-none {
+  pointer-events: none;
+}
