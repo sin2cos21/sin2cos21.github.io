@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#canvas {
+  display: block;
+  background: white;
+}
+
+#button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#create {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+}
