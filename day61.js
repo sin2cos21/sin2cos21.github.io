@@ -133,14 +133,13 @@ function render() {
     });
   }
   id = requestAnimationFrame(render);
-  // console.log(id);
 }
 
 setInterval(function() {
   let enemy = new Enemy(ctx);
   enemies.push(enemy);
 }, 2000);
-//render();
+render();
 
 //enemy ,beam
 // function hit(target1, target2) {
