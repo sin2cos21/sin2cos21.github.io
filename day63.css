@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+}
+img {
+  width: 100px;
+  height: auto;
+}
+
+#kyaku {
+  position: absolute;
+  left: 700px;
+}
+
+.sushi {
+  display: none;
+}
+
+.sushiZanmai {
+  animation: go 1s ease 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes go {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+.fukidashi {
+  display: none;
+  width: 50px;
+  margin-top: 10px;
+  position: absolute;
+  left: 800px;
+  text-align: center;
+  padding: 30px;
+  background-color: black;
+  border-radius: 100%;
+  z-index: 10;
+}
+
+.fukidashi::after {
+  color: white;
+  content: "旨い!";
+}
+
+.fukidashi::before {
+  left: -5px;
+  margin-top: 2px;
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: 1;
+  border-style: solid;
+  border-color: transparent black;
+  border-width: 10px 10px 10px 0px;
+}
