@@ -1,0 +1,24 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#canvas {
+  border: solid 1px rgba(31, 227, 13, 1);
+}
+
+#createDiv {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+}
+
+#countWrapper {
+  color: rgba(31, 227, 13, 1);
+  padding-bottom: 20px;
+}
