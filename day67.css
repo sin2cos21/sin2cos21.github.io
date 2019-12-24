@@ -1,0 +1,22 @@
+body {
+  font-family: Helvetica, YuGothic, "游ゴシック", sans-serif;
+}
+
+.letter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  height: 200px;
+  width: 300px;
+  border: solid 1px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.pageShift {
+  display: none;
+}
