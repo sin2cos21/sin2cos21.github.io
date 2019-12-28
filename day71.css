@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+#delete {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+#release {
+  position: absolute;
+  left: 100px;
+  top: 10px;
+}
