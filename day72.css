@@ -1,0 +1,18 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-image: url("day31_image/4.jpg");
+  background-size: cover;
+}
+
+.oneBlock {
+  background-color: white;
+  position: absolute;
+  border-right: solid 2px black;
+  border-bottom: solid 2px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
