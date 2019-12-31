@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+
+#gameBoard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oneBlock {
+  background-color: rgba(0, 250, 0, 0.5);
+  height: 50px;
+  width: 50px;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.oneBlock:hover {
+  background-color: rgba(0, 250, 0, 0.8);
+}
+
+.black {
+  background-image: url(day74_black.png);
+}
+
+.white {
+  background-image: url(day74_white.png);
+}
